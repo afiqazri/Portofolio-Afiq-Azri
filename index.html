@@ -276,7 +276,7 @@ let rq;new ResizeObserver(()=>{cancelAnimationFrame(rq);rq=requestAnimationFrame
     $('#ld .b').remove();
     $('#ld p').textContent=location.protocol==='file:'
       ?'File PDF tidak bisa dibuka langsung dari folder. Jalankan lewat server lokal (mis. "python -m http.server") atau publikasikan ke GitHub Pages.'
-      :'PDF tidak ditemukan. Pastikan file "'+PDF_FILE+'" berada satu folder dengan index.html.';
+      :'Gagal memuat "'+PDF_FILE+'" ('+(err&&(err.name+': '+(err.message||''))||'error tidak diketahui')+'). Coba muat ulang dengan Ctrl+Shift+R; jika masih gagal, buka alamat PDF-nya langsung untuk memastikan file ada.';
   }
 })();
 </script>
